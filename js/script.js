@@ -6,6 +6,9 @@ const text = document.querySelector('.forest');
 const lamp = document.querySelector('.lamp');
 const home = document.querySelector('#home');
 const services = document.querySelector('#services');
+
+const menuBtn = document.querySelector('#menu_btn');
+const menu = document.querySelector('.menu');
 let windowWidth;
 
 
@@ -147,8 +150,6 @@ backBtns.forEach(btn => {
 
 
 
-const menuBtn = document.querySelector('#menu_btn');
-const menu = document.querySelector('.menu')
 menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('active');
     setTimeout(() => {
