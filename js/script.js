@@ -52,8 +52,6 @@ let isMobileDevice = regexp.test(details);
 if (isMobileDevice) {
     lamp.style.display = "none";
     document.querySelector('.explore_btn').style.display = "none";
-    document.addEventListener('scroll', hideMenu);
-    menu.addEventListener('click', hideMenu);
 } else {
     window.addEventListener('resize', setSizes)
 
