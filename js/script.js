@@ -58,17 +58,17 @@ if (isMobileDevice) {
     // ----the lamp follows the cursor--------
     services.addEventListener('mousemove', (e) => {
         if (windowWidth > 900) {
-            let x = -((windowWidth / 100 * 200 / 2) - e.x);
-            let y = -((635 / 100 * 200 / 2) - e.y);
-            if (y < -(635 / 100 * 200 / 5)) {
+            let x = -((windowWidth / 100 * 300 / 2) - e.x);
+            // a 300 persentage of Window width(section width) == the image's width
+            // the image's width / 2 == the center of the image(X axis)
+            // the center of the image(X axis) - x == the x(left) coordinate
+            let y = -((635 / 100 * 300 / 2) - e.y);
+            // a 300 persentage of Window height(section height == 100vh == 635px) == the image's height
+            // the image's height / 2 == the center of the image(Y axis)
+            // the center of the image(Y axis) - y == the y(top) coordinate
+            if (y < -(635 / 100 * 300 / 5)) {
                 lamp.style.left = x + "px";
-                // a 200 persentage of Window width(section width) == the image's width
-                // the image's width / 2 == the center of the image(X axis)
-                // the center of the image(X axis) - x == the x(left) coordinate
                 lamp.style.top = y + "px";
-                // a 200 persentage of Window height(section height == 100vh == 635px) == the image's height
-                // the image's height / 2 == the center of the image(Y axis)
-                // the center of the image(Y axis) - y == the y(top) coordinate
             }
         }
     })
