@@ -362,11 +362,11 @@ header .logo
 
 #services .lamp
 {
-    width: 200%;
-    height: 200%;
+    width: 300%;
+    height: 300%;
     position: absolute;
-    left: -50%;
-    top: -70%;
+    left: -100%;
+    top: -100%;
     animation: lamp 5s ease-in-out infinite alternate-reverse;
     transform-origin: top;
 }
