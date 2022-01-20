@@ -59,11 +59,11 @@ if (isMobileDevice) {
     services.addEventListener('mousemove', (e) => {
         if (windowWidth > 900) {
             let x = -((windowWidth / 100 * 300 / 2) - e.x);
-            // a 300 persentage of Window width(section width) == the image's width
+            // a 200 persentage of Window width(section width) == the image's width
             // the image's width / 2 == the center of the image(X axis)
             // the center of the image(X axis) - x == the x(left) coordinate
             let y = -((635 / 100 * 300 / 2) - e.y);
-            // a 300 persentage of Window height(section height == 100vh == 635px) == the image's height
+            // a 200 persentage of Window height(section height == 100vh == 635px) == the image's height
             // the image's height / 2 == the center of the image(Y axis)
             // the center of the image(Y axis) - y == the y(top) coordinate
             if (y < -(635 / 100 * 300 / 4)) {
@@ -178,3 +178,9 @@ function hideMenu() {
     }, 400);
 }
 
+const emailBtn = document.querySelector('#email_btn');
+
+emailBtn.addEventListener('change', () => {
+    if (emailBtn.value !== "")emailBtn.classList.add('active');
+    else emailBtn.classList.remove('active');
+})
