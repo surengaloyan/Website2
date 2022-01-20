@@ -66,10 +66,8 @@ if (isMobileDevice) {
             // a 200 persentage of Window height(section height == 100vh == 635px) == the image's height
             // the image's height / 2 == the center of the image(Y axis)
             // the center of the image(Y axis) - y == the y(top) coordinate
-            if (y < -(635 / 100 * 300 / 4)) {
-                lamp.style.left = x + "px";
-                lamp.style.top = y + "px";
-            }
+            lamp.style.left = x + "px";
+            lamp.style.top = y + "px";
         }
     })
 
