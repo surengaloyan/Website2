@@ -477,6 +477,7 @@ header .logo
 }
 
 #contact .contact_form input:focus ~ span,
+#contact .contact_form input.active ~ span,
 #contact .contact_form textarea:focus ~ span,
 #contact .contact_form input:valid ~ span,
 #contact .contact_form textarea:valid ~ span
