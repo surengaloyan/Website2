@@ -58,16 +58,14 @@ if (isMobileDevice) {
     // ----the lamp follows the cursor--------
     services.addEventListener('mousemove', (e) => {
         if (windowWidth > 900) {
-            let x = -((windowWidth / 100 * 300 / 2) - e.x);
-            // a 200 persentage of Window width(section width) == the image's width
+            lamp.style.left =  -((windowWidth / 100 * 300 / 2) - e.x) + "px";
+            // a 300 persentage of Window width(section width) == the image's width
             // the image's width / 2 == the center of the image(X axis)
             // the center of the image(X axis) - x == the x(left) coordinate
-            let y = -((635 / 100 * 300 / 2) - e.y);
-            // a 200 persentage of Window height(section height == 100vh == 635px) == the image's height
+            lamp.style.top = -((635 / 100 * 300 / 2) - e.y) + "px";
+            // a 300 persentage of Window height(section height == 100vh == 635px) == the image's height
             // the image's height / 2 == the center of the image(Y axis)
             // the center of the image(Y axis) - y == the y(top) coordinate
-            lamp.style.left = x + "px";
-            lamp.style.top = y + "px";
         }
     })
 
@@ -148,36 +146,17 @@ backBtns.forEach(btn => {
 
 menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('active');
-    setTimeout(() => {
-        menuBtn.classList.toggle('fa-times')
-    }, 200);
-    if (menuBtn.classList.contains('fa-times')) {
-        menu.classList.toggle('active');
-        setTimeout(() => {
-            menu.style.display = "none";
-        }, 400);
-    }else{
-        menu.style.display = "flex";
-        setTimeout(() => {
-            menu.classList.toggle('active');
-        }, 1);
-    }
-    
+    menuBtn.classList.toggle('fa-times')
+    menu.classList.toggle('active');
 })
 
 function hideMenu() {
     menu.classList.remove('active');
     menuBtn.classList.remove('active');
-    setTimeout(() => {
-        menuBtn.classList.remove('fa-times')
-    }, 200);
-    setTimeout(() => {
-        menu.style.display = "none";
-    }, 400);
+    menuBtn.classList.remove('fa-times')
 }
 
 const emailBtn = document.querySelector('#email_btn');
-
 emailBtn.addEventListener('change', () => {
     if (emailBtn.value !== "")emailBtn.classList.add('active');
     else emailBtn.classList.remove('active');
