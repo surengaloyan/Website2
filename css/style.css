@@ -692,17 +692,18 @@ footer .copyright
         padding-top: 100px;
         background:#fff;
         border-radius: .5rem 0 0 .5rem;
-        display: none;
+        display: flex;
         justify-content: start;
         align-items: center;
         flex-direction: column;
-        transform: translateX(100%);
-        position: relative;
+        position: fixed;
+        top: 0;
+        right: -100%;
         z-index: 200;
         transition: all .4s ease-out;
     }
     header .menu.active{
-        transform: translateX(0);
+        right:0;
     }
 
     header .menu a
