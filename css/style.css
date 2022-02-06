@@ -309,8 +309,9 @@ header .logo
 /* ------services-------- */
 #services
 {
-    background-color: #000;
+    background-image: url(../img/services_bg.jpg);
     position: relative;
+    background-size:cover;
     overflow: hidden;
 }
 #services::before
@@ -330,6 +331,8 @@ header .logo
     height: 100vh;
     gap: 2rem;
     padding: 10rem 0 .5rem 0;
+    position: relative;
+    z-index: 200;
 }
 
 #services .content .box
@@ -342,6 +345,16 @@ header .logo
     color: #666;
     box-shadow: -.3rem -.3rem 1rem #666 inset;
     cursor: pointer;
+}
+
+#services .content .box:hover
+{   
+    transform: scale(1.1);
+}
+
+#services .content h1
+{
+    border: none;
 }
 
 #services .content .box i
@@ -369,6 +382,7 @@ header .logo
     top: -100%;
     animation: lamp 5s ease-in-out infinite alternate-reverse;
     transform-origin: top;
+    z-index: 100;
 }
 
 
@@ -628,6 +642,10 @@ footer .copyright
     }
 
     /* --services-- */
+    #services
+    {
+        background:#000;
+    }
     #services .content{
         height: auto;
         padding:0 0 3rem 0;
